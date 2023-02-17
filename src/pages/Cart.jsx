@@ -62,7 +62,7 @@ const Cart = ({ cart, removeItem }) => {
                     You don't have any items in your Cart!
                   </h2>
                   <Link to="/nfts">
-                    <button className="btn click">Browse Books</button>
+                    <button className="btn click">Browse NFTs</button>
                   </Link>
                 </div>
               )}

@@ -36,7 +36,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-            <div className="copyright__container">Copyright © Cole Morgan 2023 <br/> <a href="/"> View Top </a></div>
+            <div className="copyright__container">Copyright © Cole Morgan 2023 <br/> <a href="/" className=""> View Top </a></div>
           </div>
         </div>
       </div>

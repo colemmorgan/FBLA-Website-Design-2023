@@ -33,6 +33,7 @@ const Nav = () => {
           </li>
         </ul>
       </div>
+      <div className="settings__modal"></div>
     </nav>
   );
 };

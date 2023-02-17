@@ -54,6 +54,7 @@ li {
   margin: 0 auto;
 }
 
+
 /* NAV */
 
 nav {
@@ -201,17 +202,6 @@ hr {
 
 /* Left Side Bar*/
 
-@keyframes color-flow-vertical {
-  0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 50% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
 
 .left__sidebar--container {
   position: absolute;
@@ -252,22 +242,6 @@ hr {
 .left__sidebar:before {
   top: -5%;
   left: -100%;
-}
-
-.left__sidebar--container:hover .left__sidebar,
-.left__sidebar--container:hover .left__sidebar::after,
-.left__sidebar--container:hover .left__sidebar::before {
-  background: rgb(147, 29, 197);
-  background: linear-gradient(
-    0deg,
-    rgba(147, 29, 197, 1) 15%,
-    rgba(181, 117, 209, 1) 35%,
-    rgba(147, 29, 197, 1) 55%,
-    rgba(181, 117, 209, 1) 75%,
-    rgba(147, 29, 197, 1) 100%
-  );
-  background-size: 400% 400%;
-  animation: color-flow-vertical 4000ms linear infinite;
 }
 
 .icon__container--top {
@@ -372,15 +346,16 @@ Trending
 */
 
 .trending {
-  position: relative;
   z-index: 1;
 }
 
 .section__title {
   position: relative;
   text-align: center;
+  visibility: visible;
   font-size: 48px;
-  margin-bottom: 64px;
+  margin-bottom: 64px !important;
+  margin: 0 auto;
 }
 
 .section__title::after {
@@ -395,12 +370,13 @@ Trending
 }
 
 .trending__list {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  /* border: 2px solid white; */
   justify-content: center;
   margin: 0 auto;
 }
+
 
 .nft {
   height: 410px;
@@ -419,7 +395,6 @@ Trending
   );
   padding: 0px 8px;
   box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.2);
-  position: relative;
 }
 
 .nft__title {
@@ -437,8 +412,7 @@ Trending
 .nft__img--wrapper {
   width: 275px;
   height: 190px;
-  /* overflow: hidden; */
-  /* border: 2px solid black; */
+ 
   position: relative;
   display: flex;
   margin: 12px 0px 18px 0px;
@@ -513,6 +487,49 @@ button {
   margin-bottom: 8px;
   font-size: 16px;
 }
+
+.rectangle__modal {
+  background-color: rgba(0, 0, 0, 0.94);
+  position: fixed;
+  width: 100%;
+  height: 115vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+}
+
+.mag__img--container{
+  max-width: 775px;
+  max-height: 540px;
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+.magnify-image {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.image__exit{
+  position: absolute;
+  z-index: 11;
+  color: #f1f1f1;
+  background-color: #7342d6;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  top: 3%;
+  left: 3%;
+  padding: 6px 6px;
+}
+
+
+
 
 /* Footer */
 
@@ -739,12 +756,13 @@ form {
   height: 100%;
   width: 100%;
   text-align: center;
-  padding: 24px 12px;
+  padding: 32px 12px;
+ color: #f1f1f1;
 }
 
 .nft__page--title {
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   font-size: 36px;
 }
 
@@ -769,8 +787,19 @@ form {
   font-size: 18px;
   max-width: 550px;
   margin: 0 auto;
+  margin-bottom: 24px;
 }
 
+.nft__page--information {
+  font-size: 19px;
+  margin-bottom: 40px;
+}
+
+.nft__page--price,
+.nft__page--release,
+.nft__page--delivery {
+  margin-bottom: 12px;
+}
 
 /* 
 MODAL
@@ -812,7 +841,7 @@ MODAL
   right: 0;
   background-color: rgba(0,0,0);
   opacity: 0;
-  z-index: 2;
+  z-index: 3;
   filter: blur(2px);
   transition: all 400ms ease;
   visibility: hidden;
@@ -1003,7 +1032,7 @@ input:focus, textarea:focus{
 .sub-form__submit:hover{
   border-color: white;
   background-color: transparent;
-  color: #00b0ff;
+  color: #7342d6;
 }
 
 
@@ -1207,3 +1236,52 @@ input:focus, textarea:focus{
   color: #f1f1f1;
 }
 
+
+.back{
+  position: relative;
+  font-size: 22px;
+  color: #f1f1f1;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.nft-back{
+  position: relative;
+  max-width: 115px;
+}
+/* HOver */
+
+.link__hover-effect:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  bottom: -4px;
+  right: 0;
+  transition: all 300ms ease;
+}
+
+.link__hover-effect--purple:after {
+  background-color: #7342d6;
+}
+.link__hover-effect--black:after {
+  background-color: #000;
+}
+
+.link__hover-effect:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.color-fade{
+  transition: all 300ms ease;
+}
+.color-fade:hover {
+
+  filter: brightness(0.9);
+}
+
+
+.page{
+  font-size: 19px !important;
+}
