@@ -13,7 +13,7 @@ const Landing = () => {
       <section className="landing__container" id="Landing">
         <div className="landing__content">
           <div className="container test">
-            <div className="row">
+            <div className="row landing-row">
               <div className="landing__info">
                 <h1 className="landing__title">Gainesville Spots</h1>
                 <h2 className="landing__subtitle">GNV Technologies</h2>

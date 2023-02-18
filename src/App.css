@@ -14,6 +14,7 @@
 
 body {
   background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
 }
 
 a {
@@ -70,7 +71,7 @@ nav {
 .nav__container {
   max-width: 1300px;
   height: 100%;
-  padding: 0 24px;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,6 +111,17 @@ nav {
   }
 }
 
+@keyframes fade-up-minor {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .logo {
   width: 100px;
   scale: 1.6;
@@ -128,7 +140,6 @@ h1 {
 .landing__container {
   min-height: calc(100vh - 90px);
   padding: 45px 0 25px 0px;
-  animation: fade-up 650ms 500ms backwards;
 }
 
 .landing__info,
@@ -137,9 +148,15 @@ h1 {
   padding: 0 12px;
 }
 
+.landing__info{
+  animation: fade-up 650ms 550ms backwards;
+}
+
 .landing__img {
   display: flex;
   align-items: center;
+  justify-content: center;
+  animation: fade-up 650ms 650ms backwards;
 }
 
 .landing__photo {
@@ -296,6 +313,7 @@ hr {
   align-items: center;
   z-index: 2;
   box-shadow: 0px 0px 8px rgba(256, 256, 256, 0.3);
+  animation: fade-up 650ms 600ms backwards;
 }
 
 .contact__button--icon {
@@ -309,18 +327,22 @@ hr {
 .feature {
   width: 150px;
   height: 150px;
-  /* border: 2px solid white; */
+  animation: fade-up 650ms 800ms backwards;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
   background-color: #202020;
-  position: relative;
+  margin: 0 80px;
   z-index: 1;
   border-radius: 12px;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.2);
   transition: all 300ms ease;
+  
+}
+
+.feature__row{
+  flex-wrap: wrap;
 }
 
 .feature:hover {
@@ -350,6 +372,7 @@ Trending
 }
 
 .section__title {
+  display: block;
   position: relative;
   text-align: center;
   visibility: visible;
@@ -370,7 +393,6 @@ Trending
 }
 
 .trending__list {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -379,7 +401,7 @@ Trending
 
 
 .nft {
-  height: 410px;
+  height: 405px;
   width: 315px;
   margin: 20px 11px;
   border-radius: 12px;
@@ -395,6 +417,7 @@ Trending
   );
   padding: 0px 8px;
   box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .nft__title {
@@ -402,12 +425,7 @@ Trending
   font-size: 24px;
 }
 
-.nft__skeleton {
-  width: 100%;
-  height: 110%;
-  background-color: rgb(227, 227, 227);
-  position: absolute;
-}
+
 
 .nft__img--wrapper {
   width: 275px;
@@ -491,7 +509,7 @@ button {
 .rectangle__modal {
   background-color: rgba(0, 0, 0, 0.94);
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 115vh;
   top: 50%;
   left: 50%;
@@ -499,6 +517,7 @@ button {
   z-index: 100000;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .mag__img--container{
@@ -511,7 +530,6 @@ button {
 
 .magnify-image {
   width: 100%;
-  position: relative;
   z-index: 10;
 }
 
@@ -529,6 +547,9 @@ button {
 }
 
 
+.hide--nfts .section__title{
+  display: none;
+}
 
 
 /* Footer */
@@ -1284,4 +1305,259 @@ input:focus, textarea:focus{
 
 .page{
   font-size: 19px !important;
+}
+
+
+/* About */
+
+.about__container{
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about{
+  height: 450px;
+  width: 340px;
+  border: 2px solid #7342d6;
+  border-radius: 8px;
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: all 300ms ease;
+  margin: 0 40px 0px 40px;
+}
+
+.about__image{
+  color: #7342d6;
+  height: 30%;
+  padding: 16px;
+  font-size: 128px;
+  margin-bottom: 40px;
+  animation: bounce 800ms infinite alternate-reverse;
+}
+
+.about__title{
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.about__para{
+  width: 85%;
+  line-height: 1.5;
+  font-size: 18px;
+  text-align: center;
+}
+
+.wave{
+  position: absolute;
+  bottom: 0;
+}
+
+.about:hover{
+  background-color: #222222;
+}
+
+
+@keyframes bounce {
+  0%{ transform: translateY(0);}
+  100%{ transform: translateY(-4px);}
+}
+
+.sliding__container{
+  position: relative;
+}
+
+
+
+@media (max-width: 1670px) {
+
+  .row {
+    max-width: 1300px;
+    padding: 20px;
+  }
+  .landing__title{
+    font-size: 64px;
+  }
+  .landing__subtitle {
+    font-size: 28px;
+  }
+
+  .landing__description{
+    font-size: 22px;
+  }
+
+  .feature {
+    margin: 0 70px;
+  }
+
+  .icon__popper{
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 1400px) {
+  .left__sidebar--container{
+    display: none;
+  }
+}
+
+@media (max-width: 1279px) {
+  .landing__title{
+    font-size: 58px;
+  }
+  .landing__subtitle {
+    font-size: 26px;
+  }
+
+  .landing__description{
+    font-size: 20px;
+  }
+
+  .feature {
+    margin: 0 50px;
+  }
+  .landing__btn {
+    font-size: 18px;
+  }
+  .about {
+    margin-bottom: 40px;
+  }
+  .feature{
+    width: 135px;
+    margin: 0 40px 50px 50px;
+  }
+  .landing__container{
+    min-height: none;
+  }
+}
+
+@media (max-width:820px) {
+  .landing-row{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .container {
+    margin: 0 60px;
+  }
+
+  .landing__img{
+    margin: 0 auto;
+  }
+  .section__title{
+    margin-top: 20px;
+  }
+  .landing__photo{
+    height: 300px;
+    width: 450px;
+  }
+
+  .nft{
+    margin-left: 5;
+    margin-right: 5;
+  }
+  .landing__info{
+    width: 600px;
+  }
+
+  .landing__description{
+    margin: 0 auto;
+  }
+
+  .currency__container{
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .button__container {
+   display: flex;
+   justify-content: center;
+  }
+
+  hr {
+    margin: 0 auto;
+  }
+  .about {
+    width: 300px;
+    margin: 0 20px 40px 20px;
+  }
+  .landing__title{
+    font-size: 62px;
+  }
+  .landing__subtitle{
+    font-size: 32px;
+  }
+  .feature__text{
+    font-size: 16px;
+  }
+
+  .feature{
+    margin: 15px 35px;
+  }
+}
+
+@media(max-width: 550px) {
+  .landing__photo{
+    height: 240px;
+    width: 350px;
+  }
+
+  .info-row{
+    max-width: 400px;
+    width: 100%;
+  }
+  .landing__title{
+    font-size: 48px;
+  }
+  .landing__subtitle{
+    font-size: 26px;
+  }
+  .feature__text{
+    font-size: 16px;
+  }
+  .landing__description{
+    font-size: 18px;
+    padding: 0 15px;
+  }
+
+  .landing__btn {
+    font-size: 16px;
+  }
+
+  .feature{
+    margin: 15px 9px;
+    height: 110px;
+    width: 100px;
+  }
+  .feature__text{
+    font-size: 14px;
+  }
+
+  .feature__icon{
+    font-size: 32px;
+  }
+
+    .about__title{
+      font-size: 28px;
+    }
+  .about {
+    height: 380px;
+  }
+  .about__image{
+    font-size: 96px;
+    margin-bottom: 8px;
+  }
+
+  .about__para{
+    font-size: 16px;
+
+  }
 }

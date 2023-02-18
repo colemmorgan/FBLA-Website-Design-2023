@@ -52,7 +52,7 @@ export const nfts = [
     url: reitz,
     originalPrice: 27.75,
     salePrice: 14.95,
-    rating: 4.5,
+    rating: 5,
     duration: null,
   },
   {
@@ -70,7 +70,7 @@ export const nfts = [
     url: HHall,
     originalPrice: 71.44,
     salePrice: null,
-    rating: 5,
+    rating: 3,
     duration:  1 * 24 * 60 * 60 * 1000,
   },
   {

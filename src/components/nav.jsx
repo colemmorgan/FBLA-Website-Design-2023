@@ -12,13 +12,13 @@ const Nav = () => {
         </Link>
         <ul className="nav__links">
           <li className="nav__item click">
-            <Link to={"/nfts"} className="nav__link">
-              NFTs
+            <Link to={"/"} className="nav__link">
+              Home
             </Link>
           </li>
           <li className="nav__item click">
-            <Link to={"/"} className="nav__link click">
-              Home
+            <Link to={"/nfts"} className="nav__link click">
+              NFTs
             </Link>
           </li>
           <li className="nav__item click">
@@ -28,7 +28,7 @@ const Nav = () => {
           </li>
           <li className="nav__item click">
             <Link to={"/"} className="nav__link ">
-              <FontAwesomeIcon icon={faGear}/>
+              Subscribe
             </Link>
           </li>
         </ul>

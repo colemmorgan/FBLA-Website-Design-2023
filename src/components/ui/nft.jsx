@@ -25,6 +25,7 @@ const Nft = ({ nft }) => {
     }
   }
 
+
   return (
     <>
       <div className="nft" id="nfl">

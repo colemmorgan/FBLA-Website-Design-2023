@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer";
 
  
 
-const Trending = () => {
+const Viral = () => {
   const {ref, inView} = useInView({
     threshold: 0.2
   })
@@ -25,17 +25,17 @@ const Trending = () => {
       setCounter((prevCounter) => (prevCounter) + 1)
     }
     if (!inView && counter === 0) {
-      animation.start({x: '100vw', opacity:0})
+      animation.start({x: '-100vw', opacity:0})
     }
   }, [inView])
 
   return (
     <section className="trending">
       <motion.div className="container" ref={ref}>
-        <motion.div className="trending__row" animate={animation} transition={{repeat:1}}>
-          <h1 className="section__title">Releasing Soon</h1>
-          <div className="trending__list top">
-            {nfts.filter((nft) => nft.duration).slice(0,4).map((nft) => (
+        <motion.div className="trending__row" animate={animation}>
+          <h1 className="section__title">Trending NFTs</h1>
+          <div className="trending__list">
+            {nfts.filter((nft) => nft.rating===5).slice(0,4).map((nft) => (
               <Nft nft={nft} key={nft.id}/>
             ))}
           </div>
@@ -45,4 +45,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default Viral;

@@ -3,6 +3,7 @@ import Landing from "../components/Landing";
 import Sidebar from "../components/sidebar"
 import Info from "../components/info"
 import Trending from "../components/trending";
+import Viral from "../components/viral";
 
 const Home = () => {
   return (
@@ -10,8 +11,10 @@ const Home = () => {
       <Landing />
       <Sidebar />
       <Info />
+      <div className="sliding__container">
       <Trending />
-      <Trending className="no"/>
+      <Viral/>
+      </div>
     </div>
   );
 };
