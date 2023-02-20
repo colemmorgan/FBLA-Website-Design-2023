@@ -11,10 +11,12 @@ const Nav = () => {
     
     if (isModalOpen) {
       setModal(false)
+      document.body.style.overflowY = "auto"
       return document.body.classList.remove("nav--open");
     }
     else if (!isModalOpen){
       setModal(true)
+      document.body.style.overflowY = "hidden"
       return (document.body.classList += " nav--open");
     }
 

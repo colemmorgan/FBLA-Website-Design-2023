@@ -8,12 +8,18 @@ const PopUpModal = () => {
   const [success, setSuccess] = useState(false)
 
   function toggleModal() {
-    setModal(!isModalOpen);
+    
 
-    if (isModalOpen === true) {
-      return document.body.classList.remove("modal--open");
-    } else {
+    if (!isModalOpen) {
+      setModal(true)
+      document.body.style.overflowY = "hidden"
       return (document.body.classList += " modal--open");
+     
+    } else {
+      document.body.style.overflowY = "auto"
+      setModal(false)
+      return document.body.classList.remove("modal--open");
+      
     }
   }
 

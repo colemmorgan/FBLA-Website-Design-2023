@@ -12,6 +12,7 @@ import { nfts } from "./Data";
 import NftPage from "./pages/NftPage";
 import PopUpModal from "./components/ui/PopUpModal";
 import Cart from "./pages/Cart";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   const init = useCallback(async (engine) => {
@@ -45,6 +46,7 @@ function App() {
           init={init}
           className="particles"
         />
+        <ScrollToTop/>
         <PopUpModal />
         <Routes>
           <Route path="/" element={<Home />} />
