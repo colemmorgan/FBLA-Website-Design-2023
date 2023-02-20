@@ -7,7 +7,10 @@
 }
 
 .app {
-  overflow-x: hidden !important;
+  position: relative;
+}
+
+body {
   position: relative;
 }
 
@@ -143,9 +146,10 @@ nav {
 .exit-nav{
   position: absolute;
   right: 5%;
-  top: 3%;
+  top: 0.5%;
   color: #f1f1f1;
-  font-size: 24px;
+  font-size: 28px;
+  z-index: 23232424;
 }
 
 .mobile__nav--links{
@@ -155,6 +159,8 @@ nav {
   justify-content: center;
   height: 100%;
   color: #f1f1f1;
+  max-height: 100vh;
+
   
 }
 
@@ -162,6 +168,7 @@ nav {
   margin-bottom:35px;
   font-size: 32px;
   position: relative;
+  z-index: 2332323;
 }
 
 /* END NAV */
