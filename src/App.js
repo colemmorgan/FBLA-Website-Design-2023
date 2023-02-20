@@ -41,9 +41,8 @@ function App() {
 
 
   return (
-    
+    <div className="app">
     <Router>
-      <div className="app">
         <Nav />
         <Particles
           options={particlesConfig}
@@ -62,8 +61,8 @@ function App() {
           <Route path="/cart" element={<Cart nfts={nfts} cart={cart} removeItem={removeItem} />} />
         </Routes>
         <Footer />
-      </div>
     </Router>
+    </div>
   );
 }
 
