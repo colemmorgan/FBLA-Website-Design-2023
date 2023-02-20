@@ -10,7 +10,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nfts from "./pages/Nfts";
 import { nfts } from "./Data";
 import NftPage from "./pages/NftPage";
-import ScrollToTop from "./ScrollToTop";
 import PopUpModal from "./components/ui/PopUpModal";
 import Cart from "./pages/Cart";
 
@@ -34,12 +33,13 @@ function App() {
     window.scrollTo(0, 0);
   }
 
+   document.body.style.overflowX = "hidden"
+
   return (
     
     <Router>
       <>
         <Nav />
-        <ScrollToTop />
         <Particles
           options={particlesConfig}
           init={init}
