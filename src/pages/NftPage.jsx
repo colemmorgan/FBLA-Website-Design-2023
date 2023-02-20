@@ -19,7 +19,7 @@ const NftPage = ({ nfts, addToCart, cart }) => {
   }
 
   return (
-    <div>
+    <div id="dynamicPage">
       <div className="container">
         <div className="back ">
           <Link
