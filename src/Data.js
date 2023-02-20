@@ -14,7 +14,7 @@ export const nfts = [
     id: 1,
     title: "Gainesville Hippodrome",
     url: Hippodrome,
-    originalPrice: 49.95,
+    originalPrice: 49.99,
     salePrice: 14.95,
     rating: 4.5,
     duration: 1 * 24 * 60 * 60 * 1000,

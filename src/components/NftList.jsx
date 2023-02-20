@@ -77,6 +77,7 @@ const NftList = ({ nfts: initialNfts }) => {
                 onChange={(event) => setSearchTerm(event.target.value)}
               />
               <input
+              className="limiter"
                 type="number"
                 id="searchLimit"
                 max="10"

@@ -9,7 +9,7 @@ import { useInView } from "react-intersection-observer";
 
 const Trending = () => {
   const {ref, inView} = useInView({
-    threshold: 0.2
+    threshold: 0.3
   })
   const animation = useAnimation()
 
@@ -30,7 +30,7 @@ const Trending = () => {
   }, [inView])
 
   return (
-    <section className="trending">
+    <>
       <motion.div className="container" ref={ref}>
         <motion.div className="trending__row" animate={animation} transition={{repeat:1}}>
           <h1 className="section__title">Releasing Soon</h1>
@@ -41,7 +41,7 @@ const Trending = () => {
           </div>
         </motion.div>
       </motion.div>
-    </section>
+    </>
   );
 };
 

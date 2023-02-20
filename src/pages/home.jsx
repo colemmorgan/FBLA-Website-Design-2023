@@ -11,10 +11,8 @@ const Home = () => {
       <Landing />
       <Sidebar />
       <Info />
-      <div className="sliding__container">
       <Trending />
       <Viral/>
-      </div>
     </div>
   );
 };

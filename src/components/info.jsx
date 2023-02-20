@@ -19,13 +19,12 @@ const Info = () => {
     if (inView || counter >= 1){
       animation.start({
         x:0,
-        opacity:1,
-        transition: { type: 'spring', duration: 3.5, bounce:0.2}
+        transition: { type: 'spring', duration: 2, bounce:0.2}
       })
       setCounter((prevCounter) => (prevCounter) + 1)
     }
     if (!inView && counter === 0) {
-      animation.start({x: '-100vw', opacity:0})
+      animation.start({x: '-100vw', opacity:1})
     }
   }, [inView])
 

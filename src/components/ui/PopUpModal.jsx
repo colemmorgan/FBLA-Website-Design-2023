@@ -53,8 +53,8 @@ const PopUpModal = () => {
             </div>
           </div>
           <div className="form__container">
-            <button onClick={toggleModal} className="exit__button link__hover-effect link__hover-effect--purple pointer">
-              <FontAwesomeIcon icon={faArrowLeft} className="faArrow "/> Go Back
+            <button onClick={toggleModal} className="exit__button click link__hover-effect link__hover-effect--purple pointer">
+              <FontAwesomeIcon icon={faArrowLeft} className="faArrow"/> Go Back
             </button>
             {FormId ? (
               <form className="subscription__form">

@@ -79,7 +79,7 @@ const Cart = ({ cart, removeItem }) => {
                 </div>
                 <div className="total__item total__price">
                   <span>Total</span>
-                  <span>{total}</span>
+                  <span>{(total*1.0000001).toFixed(2)}</span>
                 </div>
                 <button className="btn btn__checkout no--cursor">
                   Proceed to checkout

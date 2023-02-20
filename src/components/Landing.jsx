@@ -22,7 +22,7 @@ const Landing = () => {
                   <button className="landing__btn click">Browse NFTs!</button>
                   <button className="landing__btn click">Create Account</button>
                 </div>
-                <hr />
+                <hr className="divider"/>
                 <p className="currency__title">Accepted Currency:</p>
                 <div className="currency__container">
                   <p><FontAwesomeIcon icon={faCcVisa} className="payment click" /></p>
