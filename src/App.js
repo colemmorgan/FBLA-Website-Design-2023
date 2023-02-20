@@ -36,14 +36,14 @@ function App() {
 
    document.body.style.overflowX = "hidden"
 
-   var docWidth = document.documentElement.offsetWidth;
+  
 
 
 
   return (
     
     <Router>
-      <>
+      <div className="app">
         <Nav />
         <Particles
           options={particlesConfig}
@@ -62,7 +62,7 @@ function App() {
           <Route path="/cart" element={<Cart nfts={nfts} cart={cart} removeItem={removeItem} />} />
         </Routes>
         <Footer />
-      </>
+      </div>
     </Router>
   );
 }
