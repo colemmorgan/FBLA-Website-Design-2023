@@ -6,10 +6,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-.particles{
-  max-width: 100vw;
-  width: 100vw;
-}
+
 
 :root {
   --primary--color: #2da8d8ff;
@@ -19,6 +16,7 @@
 
 body {
   background-color: rgba(0, 0, 0, 0.9);
+  -webkit-overflow-scrolling: touch;
 }
 
 
@@ -1509,10 +1507,7 @@ input:focus, textarea:focus{
     display: flex;
   }
   
-  .particles{
-    display: none;
-  }
-  
+
   .modal{
     width: 550px;
   }
