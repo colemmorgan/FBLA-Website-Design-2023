@@ -17,6 +17,7 @@ html{
 
 
 body {
+  overflow-x: hidden !important;
   background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -1595,6 +1596,10 @@ input:focus, textarea:focus{
   .cart__header,
   .cart__item{
     justify-content: space-between;
+  }
+
+  html{
+    position: absolute;
   }
 }
 

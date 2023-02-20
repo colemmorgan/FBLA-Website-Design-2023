@@ -77,7 +77,7 @@ const particlesConfig = {
         enable: false,
         mode: "push"
       },
-      resize: true
+      resize: false
     },
     modes: {
       grab: {
@@ -107,7 +107,7 @@ const particlesConfig = {
   retina_detect: true,
   config_demo: {
     hide_card: false,
-    background_color: "#b61924",
+    background_color: "e1e1e1",
     background_image: "",
     background_position: "50% 25%",
     background_repeat: "no-repeat",

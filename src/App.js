@@ -36,6 +36,10 @@ function App() {
 
    document.body.style.overflowX = "hidden"
 
+   var docWidth = document.documentElement.offsetWidth;
+
+
+
   return (
     
     <Router>
