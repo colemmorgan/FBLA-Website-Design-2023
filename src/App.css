@@ -1632,6 +1632,12 @@ input:focus, textarea:focus{
   .divider{
     display: none;
   }
+
+  .active__option{
+    width: 170px;
+    left: 8%;
+  }
+  
   
 
   .form__container{
@@ -1648,13 +1654,9 @@ input:focus, textarea:focus{
     font-size: 16px;
 }
 
-.active__option{
-  width: 160px;
-  left: 6%;
-}
 
 .contact__open .active__option{
-  left: 56%;
+  left: 59%;
   width: 160px;
 }
 .modal__title{
@@ -1743,4 +1745,17 @@ input:focus, textarea:focus{
   display: none;
  }
 
+}
+
+@media(max-width: 500px) {
+  .active__option{
+    width: 160px;
+    left: 6%;
+  }
+
+  .contact__open .active__option{
+    left: 56%;
+    width: 160px;
+  }
+  
 }
