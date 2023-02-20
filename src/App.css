@@ -1598,9 +1598,6 @@ input:focus, textarea:focus{
     justify-content: space-between;
   }
 
-  html{
-    position: absolute;
-  }
 }
 
 @media(max-width: 550px) {
