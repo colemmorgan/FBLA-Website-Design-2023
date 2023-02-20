@@ -37,7 +37,7 @@ const NftList = ({ nfts: initialNfts }) => {
       setNfts(nfts.slice().sort((a, b) => b.originalPrice - a.originalPrice));
     }
     if (filter === "SPEED") {
-      setNfts(nfts.slice().sort((a, b) => b.rating - a.rating));
+      setNfts(nfts.slice().sort((a, b) => a.delivery.toLowerCase().localeCompare(b.delivery.toLowerCase())));
     }
   }
 

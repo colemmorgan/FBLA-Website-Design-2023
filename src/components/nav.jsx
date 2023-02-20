@@ -3,6 +3,7 @@ import logo from "../assets/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import Pdf from "../assets/Gainesville Spots Copyright Information.pdf"
 const Nav = () => {
   const [isModalOpen, setModal] = useState(false);
 
@@ -44,9 +45,9 @@ const Nav = () => {
               </Link>
             </li>
             <li className="nav__item click">
-              <Link to={"/"} className="nav__link ">
-                Subscribe
-              </Link>
+              <a href={Pdf} className="nav__link " target="_blank">
+                Copyright Info
+              </a>
             </li>
           </ul>
           {!isModalOpen && (
@@ -65,7 +66,7 @@ const Nav = () => {
               <Link to={"/"} className="mobile__nav--link" onClick={toggleModal}><span className="link__hover-effect link__hover-effect--purple">Home</span></Link>
               <Link to={"/nfts"} className="mobile__nav--link link__hover-effect link__hover-effect--purple" onClick={toggleModal}>NFTs</Link>
               <Link to={"/cart"} className="mobile__nav--link link__hover-effect link__hover-effect--purple" onClick={toggleModal}>Cart</Link>
-              <Link to={"/"} className="mobile__nav--link link__hover-effect link__hover-effect--purple" onClick={toggleModal}>Copyright Information</Link>
+              <a href={Pdf} target="_blank" className="mobile__nav--link link__hover-effect link__hover-effect--purple" onClick={toggleModal}>Copyright Information</a>
             </div>
           </div>
         </div>

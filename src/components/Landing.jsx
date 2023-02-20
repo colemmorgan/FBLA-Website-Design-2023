@@ -1,9 +1,9 @@
-import test from "../assets/Landimg2.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBitcoin, faEthereum,  faCcVisa, faApplePay} from "@fortawesome/free-brands-svg-icons";
 import Features from "./features";
 
 import undraw from "../assets/undraw.svg"
+import { Link } from "react-router-dom";
 const Landing = () => {
   
 
@@ -19,8 +19,8 @@ const Landing = () => {
                 <h2 className="landing__subtitle">GNV Technologies</h2>
                 <p className="landing__description">Buy, Sell, and Trade NFTs of real locations in Gainesville, Florida</p>
                 <div className="button__container">
-                  <button className="landing__btn click">Browse NFTs!</button>
-                  <button className="landing__btn click">Create Account</button>
+                  <Link to={"/nfts"}><button className="landing__btn click">Browse NFTs!</button></Link>
+                  <button className="landing__btn click no-cursor">Create Account</button>
                 </div>
                 <hr className="divider"/>
                 <p className="currency__title">Accepted Currency:</p>

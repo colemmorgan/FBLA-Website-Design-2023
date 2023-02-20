@@ -12,7 +12,7 @@ const Home = () => {
       <Sidebar />
       <Info />
       <Trending />
-      <Viral/>
+      <Viral id="viral-home"/>
     </div>
   );
 };

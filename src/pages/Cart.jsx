@@ -81,7 +81,7 @@ const Cart = ({ cart, removeItem }) => {
                   <span>Total</span>
                   <span>{(total*1.0000001).toFixed(2)}</span>
                 </div>
-                <button className="btn btn__checkout no--cursor">
+                <button className="btn btn__checkout click" onClick={() => alert("Sorry, this feature has not yet been implemented.")}>
                   Proceed to checkout
                 </button>
               </div>

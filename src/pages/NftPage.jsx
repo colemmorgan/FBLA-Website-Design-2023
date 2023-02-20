@@ -41,11 +41,7 @@ const NftPage = ({ nfts, addToCart, cart }) => {
             <div className="nft__page--description--container">
               <div className="nft__page--description">
                 <h1 className="nft__page--title">{nft.title}</h1>
-                <p className="nft__page--caption">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Tenetur earum repellat asperiores possimus saepe perferendis
-                  at qui dolore facere culpa.
-                </p>
+                <p className="nft__page--caption">{nft.caption}</p>
                 <div className="nft__page--information">
                 <p className="nft__info page">
             {" "}
@@ -60,14 +56,14 @@ const NftPage = ({ nfts, addToCart, cart }) => {
               icon={faCalendarDays}
               className="nft__description--icon"
             />{" "}
-            Release Date: Soon!
+            Release Date: {nft.releaseDate}
           </p>
           <p className="nft__info page">
             <FontAwesomeIcon
               icon={faTruck}
               className="nft__description--icon"
             />{" "}
-            Instant Delivery
+           {nft.delivery} Delivery
           </p>
                 </div>
                 <div className="nft__page--buttons">

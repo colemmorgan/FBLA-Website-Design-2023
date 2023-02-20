@@ -47,7 +47,7 @@ const Info = () => {
                 <FontAwesomeIcon icon={faEye}/>
               </div>
               <h2 className="about__title">Vision</h2>
-              <p className="about__para">Our vision is to create a community of Gainesville reidents that enjoy both NFTs and the city of Gainesville</p>
+              <p className="about__para">Our vision is to create a community of Gainesville residents that enjoy both NFTs and the city of Gainesville.</p>
               <img src={wave} alt="" className="wave"/>
             </div>
             <div className="about">

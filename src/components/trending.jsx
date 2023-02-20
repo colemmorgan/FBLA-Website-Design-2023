@@ -3,6 +3,7 @@ import { nfts } from "../Data";
 import Nft from "./ui/nft";
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
+import HomeNFT from "./ui/homeNFT";
 
 
  
@@ -31,12 +32,12 @@ const Trending = () => {
 
   return (
     <>
-      <motion.div className="container" ref={ref}>
+      <motion.div className="container" ref={ref} id="trend-home">
         <motion.div className="trending__row" animate={animation} transition={{repeat:1}}>
           <h1 className="section__title">Releasing Soon</h1>
           <div className="trending__list top">
             {nfts.filter((nft) => nft.duration).slice(0,4).map((nft) => (
-              <Nft nft={nft} key={nft.id}/>
+              <HomeNFT nft={nft} key={nft.id} link={"#trend-home"}/>
             ))}
           </div>
         </motion.div>

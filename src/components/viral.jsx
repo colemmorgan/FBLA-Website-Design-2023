@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { nfts } from "../Data";
-import Nft from "./ui/nft";
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
+import HomeNFT from "./ui/homeNFT";
 
 
  
@@ -36,7 +36,7 @@ const Viral = () => {
           <h1 className="section__title">Trending NFTs</h1>
           <div className="trending__list">
             {nfts.filter((nft) => nft.rating===5).slice(0,4).map((nft) => (
-              <Nft nft={nft} key={nft.id}/>
+              <HomeNFT nft={nft} key={nft.id}/>
             ))}
           </div>
         </motion.div>

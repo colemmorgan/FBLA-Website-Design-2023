@@ -53,14 +53,14 @@ const Nft = ({ nft }) => {
               icon={faCalendarDays}
               className="nft__description--icon"
             />{" "}
-            Release Date: Soon!
+            Release Date: {nft.releaseDate}
           </p>
           <p className="nft__info">
             <FontAwesomeIcon
               icon={faTruck}
               className="nft__description--icon"
             />{" "}
-            Instant Delivery
+            {nft.delivery} Delivery
           </p>
         </div>
         <div className="nft__buttons">
@@ -70,24 +70,24 @@ const Nft = ({ nft }) => {
             </button>
           </Link>
           <div className="secondary__buttons">
-            <button className="secondary__button click" onClick={magnifyNft}>
+            <button className="secondary__button click  no-cursor">
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
-            <button className="secondary__button click">
+            <button className="secondary__button click no-cursor">
               <FontAwesomeIcon icon={faPlus} />
             </button>
           </div>
         </div>
       </div>
       {magnifyOpen && (
-        <>
+        <div>
           <div className="rectangle__modal">
             <div className="mag__img--container">
             <img src={nft.url} alt="" className="magnify-image" />
             <FontAwesomeIcon icon={faX} className="image__exit click" onClick={magnifyNft}/>
             </div>
           </div>
-        </>
+        </div>
       )}
     </>
   );
