@@ -21,18 +21,10 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-#nfts__body,
-#nfts__list,
-#dynamicPage,
-.home {
-  position: relative;
-  overflow-x: hidden;
-}
-
 
 html, body {
-  overflow-x: hidden;
-  max-width: 100vw;
+  overflow-x: hidden !important;
+  max-width: 100vw
 }
 
 a {
@@ -300,7 +292,7 @@ hr {
 
 .left__sidebar--container {
   position: absolute;
-  top: 2%;
+  top: 15%;
   left: 0.5%;
   width: 60px;
   display: flex;
