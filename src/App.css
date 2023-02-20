@@ -8,6 +8,7 @@
 
 .app {
   position: relative;
+  overflow-x: hidden !important;
 }
 
 body {
