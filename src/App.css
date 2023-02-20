@@ -1509,6 +1509,10 @@ input:focus, textarea:focus{
     display: flex;
   }
   
+  .particles{
+    display: none;
+  }
+  
   .modal{
     width: 550px;
   }
