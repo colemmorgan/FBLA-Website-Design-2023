@@ -44,11 +44,7 @@ const Footer = () => {
               <li className="mobile__link"><a href={Pdf}>Copyright Info</a></li>
             </ul>
             <div className="copyright__container">
-              Copyright © Cole Morgan 2023 <br />{" "}
-              <a href="/" className="">
-                {" "}
-                View Top{" "}
-              </a>
+              Copyright © Cole Morgan 2023
             </div>
           </div>
         </div>
