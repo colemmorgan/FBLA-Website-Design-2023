@@ -18,7 +18,7 @@ const NftList = ({ nfts: initialNfts }) => {
   }
   
   function isEmpty(){
-    let nftFound = nfts.filter((nft) => nft.title.includes(searchTerm))
+    let nftFound = nfts.filter((nft) => nft.title.toLowerCase().includes(searchTerm.toLowerCase()))
     if( nftFound.length === 0) {
       return setEmpty(true)
     }
